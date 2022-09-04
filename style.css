@@ -12,7 +12,7 @@ html {
 :root {
 
 
-    /* rest of the colors */
+    /* define color palet */
     --black: #111111;
     --gray-900: #555555;
     --gray: #999999;
@@ -130,11 +130,6 @@ ul {
 
 .section {
     padding: 2rem 1em;
-}
-
-
-.subtitle {
-    color: var(--black);
 }
 
 /*
@@ -272,138 +267,6 @@ logos
 
 /*
 ===============
-About
-===============
-*/
-.about {
-    background: var(--white);
-}
-
-.about-photo {
-    max-width: 100%;
-}
-
-.about-img,
-.about-info {
-    margin-bottom: 4rem;
-}
-
-.about-info h3 {
-    text-transform: uppercase;
-}
-
-@media screen and (min-width: 992px) {
-    .about-center {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .about-img,
-    .about-info {
-        flex: 0 0 calc(50% - 2rem);
-        align-self: center;
-        margin-bottom: 0;
-    }
-
-    .fa-bars {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 1170px) {
-    .about-img::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border: 0.5rem solid var(--black);
-        top: -1.5rem;
-        left: -1.5rem;
-        border-radius: var(--borderRadius);
-    }
-
-    .about-img {
-        position: relative;
-    }
-
-    .about-photo {
-        position: relative;
-    }
-}
-
-/*
-===============
-Services
-===============
-*/
-.service {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.service-icon {
-    background: var(--black);
-    padding: 0.5rem;
-    display: inline-block;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.service-title {
-    text-transform: uppercase;
-}
-
-.service-text {
-    width: 80%;
-    margin: 0 auto;
-    line-height: 1.5;
-    font-weight: 300;
-}
-
-@media screen and (min-width: 576px) {
-    .services-center {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .service {
-        flex: 0 0 calc(50% - 1rem);
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .service {
-        flex: 0 0 calc(33.333% - 1rem);
-    }
-}
-
-@media screen and (min-width: 1170px) {
-    .service {
-        display: flex;
-        text-align: left;
-    }
-
-    .service-icon {
-        align-self: start;
-    }
-
-    .service-info {
-        padding-left: 1rem;
-    }
-
-    .service-title {
-        margin-bottom: 0.5rem;
-    }
-
-    .service-text {
-        width: 90%;
-        margin: 0;
-    }
-}
-
-/*
-===============
 Featured
 ===============
 */
@@ -434,10 +297,6 @@ Featured
     text-transform: capitalize;
 }
 
-.nft-country {
-    color: var(--black);
-    text-transform: capitalize;
-}
 
 .nft-info {
     display: flex;
@@ -450,11 +309,6 @@ Featured
     text-transform: capitalize;
     color: var(--darkGrey);
     letter-spacing: 0.02rem;
-}
-
-.nft-country {
-    align-self: center;
-    color: var(--black);
 }
 
 .nft-link {
