@@ -85,6 +85,11 @@ h5 {
     font-size: 1.25rem;
 }
 
+p {
+    color: var(--gray-900);
+    font-size: 18px;
+}
+
 button {
     background-color: var(--white);
     border: 0;
@@ -129,7 +134,7 @@ ul {
 }
 
 .section {
-    padding: 5rem 0;
+    padding: 2rem 1em;
 }
 
 
@@ -417,13 +422,16 @@ Featured
     margin-bottom: 1rem;
 }
 
-
+.nft-hidden {
+    display: none;
+}
 
 .nft-footer {
     padding: 1.2rem 1.5rem;
     margin-top: -5%;
     background-color: #EEEEEE;
     max-width: fit-content;
+    display: flex;
 
 }
 
@@ -467,34 +475,20 @@ Featured
     max-width: 100%;
 }
 
-.container {
-    display: grid;
-    grid-auto-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 20px;
-    grid-template-areas:
-        ". . . ."
-        ". . . .";
+.featured-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 @media screen and (min-width: 768px) {
-    .featured-center {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
 
-    .nft-card {
-        flex: 0 0 calc(50% - 1rem);
+
+    .nft-hidden {
+        display: block;
     }
 }
 
-@media screen and (min-width: 1170px) {
-    .nft-card {
-        flex: 0 0 calc(33.3333% - 1rem);
-    }
-}
 
 /*
 ===============
@@ -550,19 +544,6 @@ Gallery
     }
 }
 
-/*
-===============
-break
-===============
-*/
-.break {
-    position: absolute;
-    width: 428px;
-    height: 2px;
-    left: 0px;
-    top: 1935px;
-    background: #EEEEEE;
-}
 
 
 /*
