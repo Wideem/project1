@@ -492,62 +492,6 @@ Featured
 
 /*
 ===============
-Gallery
-===============
-*/
-.gallery {
-    padding-top: 2rem;
-    background: var(--darkGrey);
-}
-
-.gallery-img-container {
-    position: relative;
-    background: var(--black);
-}
-
-.gallery-img {
-    max-width: 100%;
-}
-
-.gallery-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 2rem;
-    transform: translate(-50%, -50%);
-    color: var(--white);
-    transition: var(--mainTransition);
-    opacity: 0;
-    cursor: pointer;
-}
-
-.gallery-img {
-    transition: var(--mainTransition);
-}
-
-
-
-@media screen and (min-width: 768px) {
-    .gallery-center {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .gallery-img-container {
-        flex: 0 0 50%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .gallery-img-container {
-        flex: 0 0 25%;
-    }
-}
-
-
-
-/*
-===============
 Footer
 ===============
 */
