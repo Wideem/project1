@@ -14,6 +14,7 @@ html {
 
     /* rest of the colors */
     --black: #111111;
+    --gray-900: #555555;
     --gray: #999999;
     --white: #fff;
     --headingFont: sans-serif;
@@ -67,6 +68,7 @@ h1 {
 
 h2 {
     font-size: 2.441rem;
+    font-weight: bold;
 }
 
 h3 {
@@ -103,58 +105,33 @@ ul {
     padding: 0;
 }
 
-.img {
+/* .img {
     width: 100%;
     display: block;
-    object-fit: cover;
-}
+    object-fit: contain;
+} */
 
 
 
 /* Button Styles */
-.button-1 {
-    border: 1px;
-    padding: 10px;
-    border-radius: var(--borderRadius);
-    border-image: linear-gradient(to left, grey 0%, yellow 33%, yellow 33%, red 33%, red 66%, teal 66%, orange 100%) 5;
-
-
-}
-
-.btn {
-    cursor: pointer;
-    color: var(--white);
-    border: transparent;
-    border-radius: var(--borderRadius);
-    letter-spacing: var(--letterSpacing);
-    padding: 0.375rem 0.75rem;
-    box-shadow: var(--shadow-1);
+.hero-button {
     text-transform: capitalize;
+    padding: 10px;
     display: inline-block;
+    border: 3px solid red;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
 .pink {
-    color: Pink;
-}
-
-.btn-block {
-    width: 100%;
+    color: Pink !important;
 }
 
 .section {
     padding: 5rem 0;
 }
 
-.title-wrapper {
-    margin-bottom: 2rem;
-}
-
-.title {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 2.6rem;
-    letter-spacing: 0.5rem;
-}
 
 .subtitle {
     color: var(--black);
@@ -167,13 +144,11 @@ Navbar
 */
 nav {
     background: var(--white);
-    box-shadow: var(--shadow-2);
-    line-height: 1;
 }
 
 .nav-header {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     padding: 1rem;
 }
@@ -187,16 +162,6 @@ nav {
     color: var(--black);
 }
 
-.social-icons {
-    display: flex;
-    font-size: 1.25rem;
-}
-
-.social-icons a {
-    margin: 0 0.5rem;
-    color: var(--black);
-}
-
 
 .nav-center {
     max-width: 100%;
@@ -204,7 +169,6 @@ nav {
     display: flex;
     align-items: left;
     justify-content: space-between;
-    padding: 1rem;
 }
 
 /*
@@ -214,16 +178,21 @@ Hero
 */
 
 .hero {
-    margin: 42px 0px 32px 0px;
-    padding: 0px 32px 0px 32px;
+    margin: 16px 0px 32px 0px;
+    padding: 0px 0px 0px 32px;
     position: relative;
     overflow-x: hidden;
     min-height: 10vh;
 }
 
-.hero_first_item {
+.hero-top {
     width: 70%;
     z-index: 1;
+    font-weight: bold;
+}
+
+.hero-promo {
+    text-transform: uppercase;
 }
 
 .hero img {
@@ -236,24 +205,10 @@ Hero
 }
 
 
-
-.hero-banner {
-    text-align: center;
-    color: var(--white);
-    padding: 0 2rem;
-}
-
-.hero-title {
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    letter-spacing: 0.4rem;
-}
-
 .hero-text {
+    font-size: 18px;
     width: 85%;
-    margin: 0 auto;
     margin-bottom: 2rem;
-    align-self: start;
     line-height: 2;
     font-weight: 400;
 }
@@ -267,12 +222,36 @@ Hero
     .hero-text {
         width: 70%;
     }
+
+    .nav-center {
+        padding: 1 rem;
+    }
+
+    .hero-img {
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
+/*
+===============
+Banner
+===============
+*/
 
 .banner {
-    background: linear-gradient(to left, rgb(31, 187, 3) 1%, yellow 10%, orange 50%, red 100%)
+    padding: 100px 32px 32px 16px;
+    background: linear-gradient(to left, rgb(249, 209, 109) 10%, orange 50%, rgb(183, 49, 158) 100%)
 }
+
+.ba-title {
+    text-align: left;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+
+    font-weight: 500;
+}
+
 
 /*
 ===============
@@ -282,6 +261,13 @@ logos
 
 .logos {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.company-logo {
+    margin: 5px;
+
 }
 
 /*
@@ -317,6 +303,10 @@ About
         flex: 0 0 calc(50% - 2rem);
         align-self: center;
         margin-bottom: 0;
+    }
+
+    .fa-bars {
+        display: none;
     }
 }
 
@@ -602,7 +592,6 @@ Footer
     font-size: 1rem;
     margin-right: 1rem;
     letter-spacing: var(--letterSpacing);
-    transition: var(--mainTransition);
 }
 
 
@@ -634,7 +623,6 @@ Footer
     font-size: 1.5rem;
     color: var(--black);
     cursor: pointer;
-    transition: var(--mainTransition);
 }
 
 
@@ -643,16 +631,13 @@ Footer
     padding: 1rem 2rem;
     color: var(--black);
     text-transform: capitalize;
-    font-weight: bold;
     letter-spacing: var(--letterSpacing);
-    transition: var(--mainTransition);
 }
 
 
 .nav-links {
     height: 0;
     overflow: hidden;
-    transition: var(--mainTransition);
 }
 
 .show-links {
@@ -706,7 +691,6 @@ Footer
         margin-right: 0.7rem;
         color: var(--black);
         font-size: 1.2rem;
-        transition: var(--mainTransition);
     }
 }
 
